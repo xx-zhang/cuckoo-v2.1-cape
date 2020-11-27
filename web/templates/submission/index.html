@@ -65,13 +65,13 @@ $(document).ready( function() {
             <div class="tabbable">
                 <ul class="nav nav-tabs">
                     {% if resubmit %}
-                        <li class="active"><a href="#resubmit" data-toggle="tab"><span class="glyphicon glyphicon-file"></span> File resubmission</a></li>
+                        <li class="active"><a href="#resubmit" data-toggle="tab"><span class="glyphicon glyphicon-file"></span> 文件重新提交</a></li>
                     {% else %}
-                        <li class="active"><a href="#file" data-toggle="tab"><span class="glyphicon glyphicon-file"></span> File</a></li>
+                        <li class="active"><a href="#file" data-toggle="tab"><span class="glyphicon glyphicon-file"></span> 文件</a></li>
                         {% if config.vt %}
                             <li><a href="#vtdl" data-toggle="tab"><span class="glyphicon glyphicon-cloud-download"></span>VirusTotal</a></li>
                         {% endif %}
-                        <li><a href="#quarantine" data-toggle="tab"><span class="glyphicon glyphicon-fire"></span> Quarantine File</a></li>
+                        <li><a href="#quarantine" data-toggle="tab"><span class="glyphicon glyphicon-fire"></span>病毒分析</a></li>
                         {% if config.url_analysis %}
                             <li><a href="#url" data-toggle="tab"><span class="glyphicon glyphicon-globe"></span> URL</a></li>
                         {% endif %}
@@ -79,14 +79,14 @@ $(document).ready( function() {
                             <li><a href="#dlurl" data-toggle="tab"><span class="glyphicon glyphicon glyphicon-download-alt"></span> DL&Exec</a></li>
                         {% endif %}
                         <li><a href="#pcap" data-toggle="tab"><span class="glyphicon glyphicon-transfer"></span> PCAP</a></li>
-                        <li><a href="#static" data-toggle="tab"><span class="glyphicon glyphicon-tasks"></span> Static</a></li>
+                        <li><a href="#static" data-toggle="tab"><span class="glyphicon glyphicon-tasks"></span> 静态 </a></li>
                     {% endif %}
                 </ul>
                 <div class="tab-content">
                     {% if resubmit %}
                         <div class="tab-pane fade in active" id="resubmit">
                             <div class="input-group col-md-12">
-                                <label class="sr-only" form="form_resubmission"> File resubmission</label>
+                                <label class="sr-only" form="form_resubmission"> 文件重新提交</label>
                                 <input type="text" class="form-control" id="form_resubmission" name="hash" value="{{resubmit}}" />
                             </div>
                         </div>
@@ -165,9 +165,9 @@ $(document).ready( function() {
                         <div class="panel-body">
                             <div id="non-pcap-1">
                                 <div class="form-group">
-                                    <label for="form_package">Analysis Package</label>
+                                    <label for="form_package">包分析</label>
                                     <select class="form-control" id="form_package" name="package">
-                                        <option value="" active>Detect Automatically</option>
+                                        <option value="" active>智能检测</option>
                                         {% for package in packages %}
                                         <option value="{{package}}">{{package}}</option>
                                         {% endfor %}
@@ -175,7 +175,7 @@ $(document).ready( function() {
                                 </div>
                                 {% if not config.dist_master_storage_only %}
                                     <div class="form-group">
-                                        <label for="form_machine">Machine</label>
+                                        <label for="form_machine">选择机器</label>
                                         <select class="form-control" id="form_machine" name="machine">
                                             {% for id,label in machines %}
                                             <option value="{{id}}">{{label}}</option>
@@ -185,14 +185,14 @@ $(document).ready( function() {
                                 {% endif %}
                                 {% if config.tags and tags %}
                                 <div class="form-group">
-                                    <label for="form_tags">Machine Tags (<a href="#tagshelp" data-toggle="collapse">help</a>)</label>
+                                    <label for="form_tags">机器标签 (<a href="#tagshelp" data-toggle="collapse">帮助</a>)</label>
                                     <input type="text" class="form-control" id="form_tags" name="tags" value=""/>
                                     <div id="tagshelp" class="collapse">
-                                        <p class="text-muted" style="margin-top: 10px;">Syntax is tag1,tag2,tag3, etc.</p>
+                                        <p class="text-muted" style="margin-top: 10px;">语法是 tag1,tag2,tag3,等等</p>
                                         <table class="table table-striped table-centered">
                                             <thead>
                                                 <tr>
-                                                    <th style="text-align: center;">Tags</th>
+                                                    <th style="text-align: center;">标签</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -249,8 +249,8 @@ $(document).ready( function() {
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td><code>filename</code></td>
-                                                    <td>Rename the sample file</td>
+                                                    <td><code>文件名</code></td>
+                                                    <td>文件重命名</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>name</code></td>

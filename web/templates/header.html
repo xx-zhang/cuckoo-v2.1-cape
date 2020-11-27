@@ -2,11 +2,11 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="utf-8">
-<title>CAPEv2 Sandbox</title>
+<title>天融信大数据产品线沙箱</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CAPE Sandbox">
-<meta name="author" content="CAPE Sandbox">
-<link rel="icon" href="{{ STATIC_URL }}/img/cape.png">
+<meta name="description" content="TSC BDP Sandbox">
+<meta name="author" content="TSC BDP Sandbox">
+<link rel="icon" href="{{ STATIC_URL }}/img/tsc.png">
 <link href="{{ STATIC_URL }}css/lightbox.css" rel="stylesheet">
 <link href="{{ STATIC_URL }}css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 <script src="{{ STATIC_URL }}js/jquery.js"></script>
@@ -22,7 +22,7 @@
     <nav class="navbar navbar-fixed-top" role="navigation">
         <div class="navbar-header">
             <button class="navbar-toggle" type="button" data-toggle="collapse"  data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="sr-only">Toggle navigation</span>
+                <span class="sr-only">导航切换</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -30,18 +30,19 @@
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav">
-                <li><img src="{{ STATIC_URL }}graphic/cape.png" style="padding: 5px 10px"></li>
-                <li class="nav-item"><a href="{% url "dashboard" %}"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
-                <li class="nav-item"><a href="{% url "analysis" %}"><span class="glyphicon glyphicon-list"></span> Recent</a></li>
-                <li class="nav-item"><a href="{% url "pending" %}"><span class="glyphicon glyphicon-time"></span> Pending</a></li>
-                <li class="nav-item"><a href="{% url "search" %}"><span class="glyphicon glyphicon-search"></span> Search</a></li>
+                <!-- <li><img src="{{ STATIC_URL }}graphic/tsc.png" style="padding: 5px 10px"></li> -->
+                <li><img src="{{ STATIC_URL }}img/tsc.png" style="padding: 5px 10px"></li>
+                <li class="nav-item"><a href="{% url "dashboard" %}"><span class="glyphicon glyphicon-dashboard"></span>仪表盘</a></li>
+                <li class="nav-item"><a href="{% url "analysis" %}"><span class="glyphicon glyphicon-list"></span> 最近</a></li>
+                <li class="nav-item"><a href="{% url "pending" %}"><span class="glyphicon glyphicon-time"></span>等待中</a></li>
+                <li class="nav-item"><a href="{% url "search" %}"><span class="glyphicon glyphicon-search"></span> 搜索</a></li>
                 <li class="nav-item"><a href="{% url "api" %}"><span class="glyphicon glyphicon-cog"></span> API</a></li>
-                <li class="nav-item"><a href="{% url "submission" %}"><span class="glyphicon glyphicon-upload"></span> Submit</a></li>
+                <li class="nav-item"><a href="{% url "submission" %}"><span class="glyphicon glyphicon-upload"></span>文件上传</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
             <form class="navbar-form" role="form" action="{% url "search" %}" enctype="multipart/form-data" method="post">{% csrf_token %}
                 <input class="form-control mr-sm-2" type="text" class="btn btn-outline" id="form_search" name="search" placeholder="Search term as regex" />
-                <button type="submit" class="btn btn-default">Search</button>
+                <button type="submit" class="btn btn-default">搜索</button>
             </form>
             </ul>
         </nav>
