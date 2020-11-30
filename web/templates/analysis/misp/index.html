@@ -2,11 +2,11 @@
     <tbody>
     {% if analysis.misp %}
         <tr>
-            <td width=80px><strong>Event ID</strong></td>
-            <td width=100px><strong>Date</strong></td>
+            <td width=80px><strong>事件ID</strong></td>
+            <td width=100px><strong>日期</strong></td>
             <td><strong>IOCs</strong></td>
-            <td><strong>Description</strong></td>
-            <td width=60px><strong>Level</strong></td>
+            <td><strong>描述</strong></td>
+            <td width=60px><strong>等级</strong></td>
         </tr>
         {% for event in analysis.misp %}
         <tr>

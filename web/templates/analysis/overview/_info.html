@@ -4,7 +4,7 @@
     <div class="col-lg-1" style="padding-right: 0px;">
         <div class="panel panel-primary" style="height: 114px;">
             <div class="panel-heading">
-                <h4 class="panel-title" style="text-align: center;">Detections</h4>
+                <h4 class="panel-title" style="text-align: center;">检测</h4>
             </div>
             <h5 style="text-align:center;font-size: 16px";>{{analysis.malfamily_tag}}:</h5>
             <h4 style="text-align:center; font-size: 16px%;font-weight-bold";><span class="label label-danger">{{analysis.detections}}</span></h4>
@@ -15,7 +15,7 @@
     <div class="col-lg-1" style="padding-right: 0px;">
         <div class="panel panel-primary" style="height: 114px;">
             <div class="panel-heading">
-                <h4 class="panel-title" style="text-align: center;">Auto Tasks</h4>
+                <h4 class="panel-title" style="text-align: center;">自动任务</h4>
             </div>
             {% for child in children %}
             <h4 style="text-align:center; font-size: 100%;font-weight-bold" ;><a href="/submit/status/{{ child.0 }}/">#{{ child.0 }}: {{ child.1 }}</a></h4>
@@ -32,16 +32,16 @@
     {% endif %}
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h4 class="panel-title">Analysis</h4>
+            <h4 class="panel-title">分析</h4>
         </div>
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Category</th>
-                    <th>Package</th>
-                    <th>Started</th>
-                    <th>Completed</th>
-                    <th>Duration</th>
+                    <th>分类</th>
+                    <th>包</th>
+                    <th>开始</th>
+                    <th>完成</th>
+                    <th>时长</th>
                     {% if analysis.info.options %}
                         <th>Options</th>
                     {% endif %}
@@ -50,7 +50,7 @@
                     {% endif %}
                     <th>Log</th>
                     {% if config.malscore and analysis.malscore %}
-                        <th>MalScore</th>
+                        <th>威胁程度</th>
                     {% endif %}
                 </tr>
             </thead>
@@ -106,16 +106,16 @@
     <section id="machine">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h4 class="panel-title">Machine</h4>
+                <h4 class="panel-title">机器</h4>
             </div>
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Label</th>
-                        <th>Manager</th>
-                        <th>Started On</th>
-                        <th>Shutdown On</th>
+                        <th>名字</th>
+                        <th>标签</th>
+                        <th>管理端</th>
+                        <th>开机时间</th>
+                        <th>关机时间</th>
                     </tr>
                 </thead>
                 <tbody>

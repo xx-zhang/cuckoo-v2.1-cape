@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="alert alert-info"><h4>Submission complete!</h4>
-The following tasks were added successfully:
+<div class="alert alert-info"><h4>提交完成!</h4>
+下面的任务将会被提交成功:
 {% for task in tasks %}
     <a href="{% url "submission_status" task %}">{{task}}</a>
 {% endfor %}.
-Click on the links to monitor the status of the submission.
+点击链接查看监控的任务的状态.
 </div>
 {% if errors %}
-    <div class="alert alert-danger"><h4>Submission Failed!</h4>
+    <div class="alert alert-danger"><h4>提交失败!</h4>
     {% for block in errors %}
         {% for k, v in block.iteritems %}
             <p>{{k}} - {{v.error}}</p>

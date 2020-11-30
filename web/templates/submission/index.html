@@ -207,7 +207,7 @@ $(document).ready( function() {
                                 </div>
                                 {% endif %}
                                 <div class="form-group">
-                                    <strong>Network routing through <i>dirty line</i> or VPN</strong>
+                                    <strong>网络的路由通过<i>dirty line</i> 或者 VPN</strong>
                                 </div>
                                 <div class="form-group">
                                     <select class="form-control" id="form_route" name="route">
@@ -237,9 +237,9 @@ $(document).ready( function() {
                                     <input type="text" class="form-control" id="form_timeout" name="timeout" value="200"/>
                                 </div>
                                 <div class="form-group">
-                                    <label for="form_options">Options (<a href="#optionwindowshelp" data-toggle="collapse">help</a>)</label>
+                                    <label for="form_options">选项 (<a href="#optionwindowshelp" data-toggle="collapse">帮助</a>)</label>
                                     <div id="optionwindowshelp" class="collapse">
-                                        <p class="text-muted" style="margin-top: 10px;">Syntax is option1=val1,option2=val2,option3=val3, etc.</p>
+                                        <p class="text-muted" style="margin-top: 10px;">语法: option1=val1,option2=val2,option3=val3, 等等.</p>
                                         <table class="table table-striped table-centered">
                                             <thead>
                                                 <tr>
@@ -254,177 +254,176 @@ $(document).ready( function() {
                                                 </tr>
                                                 <tr>
                                                     <td><code>name</code></td>
-                                                    <td>This will force family extractor to run, Ex: name=trickbot</td>
+                                                    <td>这将强制家庭提取程序运行，例如：name = trickbot</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>curdir</code></td>
-                                                    <td>Change from where execute sample, by default %TEMP%, Ex: curdir=%APPDATA% or
-                                                        curdir=%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup
+                                                    <td>更改执行示例的位置，默认情况下为％TEMP％，例如：curdir =％APPDATA％或curdir =％APPDATA％\ Microsoft \ Windows \ Start Menu \ Programs \ Startup
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>free</code></td>
-                                                    <td>Run without monitoring (disables many capabilities) Ex: free=1</td>
+                                                    <td>在没有监视的情况下运行（禁用许多功能）例如：free = 1</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>force-sleepskip</code></td>
-                                                    <td>Override default sleep skipping behavior:  0 disables all sleep skipping, 1 skips all sleeps.</td>
+                                                    <td>覆盖默认的睡眠跳过行为：0禁用所有睡眠跳过，1跳过所有睡眠。</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>full-logs</code></td>
-                                                    <td>By default, logs prior to network activity for URL analyses and prior to access of the file in question for non-executable formats are suppressed.  Set to 1 to disable log suppression.</td>
+                                                    <td>默认情况下，禁止在网络活动之前进行URL分析的日志，以及在访问有关非可执行格式的文件之前的日志。</font><font style="vertical-align: inherit;">设置为1以禁用日志抑制。</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>force-flush</code></td>
-                                                    <td>For performance reasons, logs are buffered before being sent back to the result server.  We make every attempt to flush the buffer at critical points including when exceptions occur, but in some rare termination scenarios, logs may be lost.  Set to 1 to force flushing of the log buffers after any non-duplicate API is called, set to 2 to force flushing of every log.</td>
+                                                    <td>出于性能原因，在将日志发送回结果服务器之前先对其进行缓冲。</font><font style="vertical-align: inherit;">我们会尽一切努力在关键点刷新缓冲区，包括在发生异常时，但是在某些罕见的终止方案中，日志可能会丢失。</font><font style="vertical-align: inherit;">设置为1以在调用任何非重复的API后强制刷新日志缓冲区，设置为2以强制刷新每个日志。</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>no-stealth</code></td>
-                                                    <td>Set to 1 to disable anti-anti-VM/sandbox code enabled by default.</td>
+                                                    <td>设置为1以禁用默认情况下启用的防虚拟机/沙盒代码。</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>buffer-max</code></td>
-                                                    <td>When set to an integer of your choice, changes the maximum number of bytes that can be logged for most API buffers.</td>
+                                                    <td>当设置为您选择的整数时，更改可为大多数API缓冲区记录的最大字节数。</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>large-buffer-max</code></td>
-                                                    <td>Some hooked APIs permit larger buffers to be logged.  To change the limit for this, set this to an integer of your choice.</td>
+                                                    <td>一些挂钩的API允许记录更大的缓冲区。</font><font style="vertical-align: inherit;">要更改此限制，请将其设置为您选择的整数。</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>norefer</code></td>
-                                                    <td>Disables use of a fake referrer when performing URL analyses</td>
+                                                    <td>执行网址分析时，禁止使用伪造的引荐来源网址</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>file</code></td>
-                                                    <td>When using the zip or rar package, set the name of the file to execute</td>
+                                                    <td>使用zip或rar软件包时，设置要执行的文件名</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>password</code></td>
-                                                    <td>When using the zip or rar package, set the password to use for extraction.  Also used when analyzing password-protected Office documents.</td>
+                                                    <td>使用zip或rar软件包时，设置用于提取的密码。</font><font style="vertical-align: inherit;">在分析受密码保护的Office文档时也使用。</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>function</code></td>
-                                                    <td>When using the dll package, set the name of the exported function to execute</td>
+                                                    <td>使用dll软件包时，设置要执行的导出函数的名称</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>dllloader</code></td>
-                                                    <td>When using the dll package, set the name of the process loading the DLL (defaults to rundll32.exe).</td>
+                                                    <td>使用dll程序包时，设置加载DLL的进程的名称（默认为rundll32.exe）。</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>arguments</code></td>
-                                                    <td>When using the dll, exe, or python packages, set the arguments to be passed to the executable or exported function.</td>
+                                                    <td>使用dll，exe或python软件包时，请设置要传递给可执行文件或导出函数的参数。</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>appdata</code></td>
-                                                    <td>When using the exe package, set to 1 to run the executable out of the Application Data path instead of the Temp directory.</td>
+                                                    <td>使用exe软件包时，设置为1可以在Application Data路径而不是Temp目录中运行可执行文件。</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>startbrowser</code></td>
-                                                    <td>Setting this option to 1 will launch a browser 30 seconds into the analysis (useful for some banking trojans).</td>
+                                                    <td>将此选项设置为1将在30秒内启动浏览器（对于某些银行木马很有用）。</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>browserdelay</code></td>
-                                                    <td>Sets the number of seconds to wait before starting the browser with the startbrowser option.  Defaults to 30 seconds.</td>
+                                                    <td>设置使用startbrowser选项启动浏览器之前要等待的秒数。</font><font style="vertical-align: inherit;">默认为30秒。</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>url</code></td>
-                                                    <td>When used with the startbrowser option, this will determine the URL the started browser will access.</td>
+                                                    <td>与startbrowser选项一起使用时，这将确定启动的浏览器将访问的URL。</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>debug</code></td>
-                                                    <td>Set to 1 to enable reporting of critical exceptions occurring during analysis, set to 2 to enable reporting of all exceptions.</td>
+                                                    <td>设置为1以启用报告分析期间发生的关键异常，设置为2以启用报告所有异常。</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>disable_hook_content</code></td>
-                                                    <td>Set to 1 to remove functionality of all hooks except those critical for monitoring other processes.  Set to 2 to apply to all hooks.</td>
+                                                    <td>设置为1以除去所有挂钩的功能，但对于监视其他进程至关重要的挂钩除外。</font><font style="vertical-align: inherit;">设置为2可应用于所有钩子。</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>hook-type</code></td>
-                                                    <td>Valid for 32-bit analyses only.  Specifies the hook type to use: direct, indirect, or safe.  Safe attempts a Detours-style hook.</td>
+                                                    <td>仅对32位分析有效。</font><font style="vertical-align: inherit;">指定要使用的挂钩类型：直接，间接或安全。</font><font style="vertical-align: inherit;">安全尝试绕弯道样式的挂钩。</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>serial</code></td>
-                                                    <td>Spoof the serial of the system volume as the provided hex value</td>
+                                                    <td>欺骗系统卷的序列作为提供的十六进制值</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>single-process</code></td>
-                                                    <td>When set to 1 this will limit behaviour monitoring to the initial process only.</td>
+                                                    <td>设置为1时，这会将行为监视限制为仅初始过程。</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>exclude-apis</code></td>
-                                                    <td>Exclude the colon-separated list of APIs from being hooked</td>
+                                                    <td>排除钩子冒号分隔的API列表</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>exclude-dlls</code></td>
-                                                    <td>Exclude the colon-separated list of DLLs from being hooked</td>
+                                                    <td>从挂钩中排除冒号分隔的DLL列表</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>compression</code></td>
-                                                    <td>When set to 1 this will enable CAPE's extraction of compressed payloads</td>
+                                                    <td>设置为1时，将启用CAPE提取压缩的有效负载</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>extraction</code></td>
-                                                    <td>When set to 1 this will enable CAPE's extraction of payloads from within each process</td>
+                                                    <td>设置为1时，将启用CAPE从每个进程中提取有效负载</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>injection</code></td>
-                                                    <td>When set to 1 this will enable CAPE's capture of injected payloads between processes</td>
+                                                    <td>设置为1时，将启用CAPE捕获进程之间注入的有效负载</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>combo</code></td>
-                                                    <td>This combines compression, injection and extraction with process dumps</td>
+                                                    <td>这将压缩，注入和提取与过程转储结合在一起</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>dump-on-api</code></td>
-                                                    <td>Dump the calling module when a function from the colon-separated list of APIs is used (requires DumpOnAPI package)</td>
+                                                    <td>使用使用冒号分隔的API列表中的函数时转储调用模块（需要DumpOnAPI包）</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>bp0</code></td>
-                                                    <td>Sets breakpoint 0 (processor/hardware) to a VA or RVA value (or module::export). Applies also to bp1-bp3.</td>
+                                                    <td>将断点0（处理器/硬件）设置为VA或RVA值（或模块:: export）。</font><font style="vertical-align: inherit;">也适用于bp1-bp3。</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>file-offsets</code></td>
-                                                    <td>Breakpoints in bp0-bp3 will be interpreted as PE file offsets rather than RVAs</td>
+                                                    <td>bp0-bp3中的断点将解释为PE文件偏移而不是RVA</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>break-on-return</code></td>
-                                                    <td>Sets breakpoints on the return address(es) from a colon-separated list of APIs</td>
+                                                    <td>在冒号分隔的API列表中的返回地址上设置断点</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>base-on-api</code></td>
-                                                    <td>Sets the base address to which breakpoints will be applied (and sets breakpoints)</td>
+                                                    <td>设置要应用断点的基址（并设置断点）</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>depth</code></td>
-                                                    <td>Sets the depth an instruction trace will step into (defaults to 0, requires Trace package)</td>
+                                                    <td>设置指令跟踪将进入的深度（默认为0，需要跟踪包）</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>count</code></td>
-                                                    <td>Sets the number of instructions in a trace (defaults to 128, requires Trace package)</td>
+                                                    <td>设置跟踪中的指令数（默认为128，需要跟踪包）</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>referrer</code></td>
-                                                    <td>Specify the referrer to be used for URL tasks, overriding the default Google referrer</td>
+                                                    <td>指定用于URL任务的引荐来源网址，以覆盖默认的Google引荐来源网址</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>loop_detection</code></td>
-                                                    <td>Set this option to 1 to enable loop detection (compress call logs - behavior analysis)</td>
+                                                    <td>将此选项设置为1以启用循环检测（压缩呼叫日志-行为分析）</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>static</code></td>
-                                                    <td>Check if config can be extracted statically, if not, send to vm</td>
+                                                    <td>检查配置是否可以静态提取，如果不能，则发送给vm</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>Dl&Exec add headers example</code></td>
-                                                    <td>dnl_user_agent: "CAPE Sandbox", dnl_referer: google</td>
+                                                    <td>dnl_user_agent："CAPE沙箱"，dnl_referer：google</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>servicedesc - for service package</code></td>
-                                                    <td>Service description</td>
+                                                    <td>服务说明</td>
                                                 </tr>
                                                 <tr>
                                                     <td><code>arguments - for service package</code></td>
-                                                    <td>Service arguments</td>
+                                                    <td>服务参数</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -433,28 +432,28 @@ $(document).ready( function() {
                                 </div>
                                 {% if config.linux_on_gui %}
                                 <div class="form-group">
-                                    <label for="form_lin_options">Linux Options (<a href="#optionlinuxhelp" data-toggle="collapse">help</a>)</label>
+                                    <label for="form_lin_options">linux 选项 (<a href="#optionlinuxhelp" data-toggle="collapse">帮助</a>)</label>
                                     <div id="optionlinuxhelp" class="collapse">
-                                        <p class="text-muted" style="margin-top: 10px;">Syntax is option1=val1,option2=val2,option3=val3, etc.</p>
+                                        <p class="text-muted" style="margin-top: 10px;">语法：option1=val1,option2=val2,option3=val3, etc.</p>
                                         <table class="table table-striped table-centered">
                                             <thead>
                                                 <tr>
-                                                    <th style="text-align: center;">Option</th>
-                                                    <th style="text-align: center;">Description</th>
+                                                    <th style="text-align: center;">选项</th>
+                                                    <th style="text-align: center;">描述</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td><code>filename</code></td>
-                                                    <td>Rename the sample file</td>
+                                                    <td><code>文件名</code></td>
+                                                    <td>文件重命名</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><code>file</code></td>
-                                                    <td>When using the zip or rar package, set the name of the file to execute</td>
+                                                    <td><code>文件</code></td>
+                                                    <td>当选择压缩文件时候,选择需要检测的文件。</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><code>password</code></td>
-                                                    <td>When using the zip/rar package, set the password to use for extraction/decryption.  Also used when analyzing password-protected Office documents.</td>
+                                                    <td><code>密码</code></td>
+                                                    <td>有密码保护的文件，需要该参数.</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -464,27 +463,27 @@ $(document).ready( function() {
                                 {% endif %}
                             </div>
                             <div class="form-group">
-                                <label for="form_priority">Priority</label>
+                                <label for="form_priority">关注的安全等级</label>
                                 <select class="form-control" id="form_priority" name="priority">
-                                    <option value="1">Low</option>
-                                    <option value="2" selected>Medium</option>
-                                    <option value="3">High</option>
+                                    <option value="1">低</option>
+                                    <option value="2" selected>中</option>
+                                    <option value="3">高</option>
                                 </select>
                             </div>
                             {% if config.tlp %}
                                 <div class="form-group">
                                     <label for="form_tlp">TLP</label>
                                     <select class="form-control" id="form_tlp" name="tlp">
-                                        <option value="" selected>White</option>
-                                        <option value="Green">Green</option>
-                                        <option value="Amber">Amber</option>
-                                        <option value="Red">Red</option>
+                                        <option value="" selected>白</option>
+                                        <option value="Green">绿</option>
+                                        <option value="Amber">黄褐色</option>
+                                        <option value="Red">红</option>
                                     </select>
                                 </div>
                             {% endif %}
                             <div id="non-pcap-2">
                             <div class="form-group">
-                                <label for="form_custom">Clock</label>
+                                <label for="form_custom">设定运行时间</label>
                                 <div class='input-group date' id='datetimepicker1'>
                                     <input type='text' class="form-control" name="clock" />
                                     <span class="input-group-addon">
@@ -500,73 +499,73 @@ $(document).ready( function() {
                                 });
                             </script>
                             <div class="form-group">
-                                <label for="form_custom">Custom</label>
+                                <label for="form_custom">自定义</label>
                                 <input type="text" class="form-control" id="form_custom" name="custom" />
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="process_dump" /> Disable process dumps
+                                    <input type="checkbox" name="process_dump" />禁用进程转储
                                 </label>
                             </div>
                             {% if config.procmemory %}
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="process_memory"/> Full process memory dumps
+                                    <input type="checkbox" name="process_memory"/> 全过程转储
                                 </label>
                             </div>
                             {% endif %}
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="import_reconstruction" /> Enable import reconstruction in process dumps
+                                    <input type="checkbox" name="import_reconstruction" /> 启用进程转储中的导入重建
                                 </label>
                             </div>
                             {% if config.memory %}
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="memory" /> Full Memory Dump <span class="text-muted"><small>(if the "memory" processing module is enabled, will launch a Volatility analysis)</small></span>
+                                    <input type="checkbox" name="memory" /> 全内存转储 <span class="text-muted"><small>(if the "memory" processing module is enabled, will launch a Volatility analysis)</small></span>
                                 </label>
                             </div>
                             {% endif %}
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="enforce_timeout" /> Enforce Timeout
+                                    <input type="checkbox" name="enforce_timeout" /> 超时强制退出
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="free" /> Run without monitoring <span class="text-muted"><small>(disables many capabilities)</small></span>
+                                    <input type="checkbox" name="free" /> 运行时不监控 <span class="text-muted"><small>(关闭很多组件)</small></span>
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="disable_cape" /> Disable automatic job submission </small></span>
+                                    <input type="checkbox" name="disable_cape" /> 禁止自动提交job </small></span>
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="norefer" /> No Fake Referrer for URL Tasks
+                                    <input type="checkbox" name="norefer" /> 对URL任务不伪造 Referrer
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="nohuman" /> Disable automated interaction
+                                    <input type="checkbox" name="nohuman" /> 禁用自动交互
                                 </label>
                             </div>
                             {% if config.kernel %}
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="kernel_analysis" /> Enable zer0m0n kernel-based behavioral analysis
+                                    <input type="checkbox" name="kernel_analysis" /> 开启zer0m0n kernel-based行为分析
                                 </label>
                             </div>
                             {% endif %}
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="static"/> Try to extract config without VM <span class="text-muted"><small>(Submit to VM if not extracted)</small></span>
+                                    <input type="checkbox" name="static"/> 尝试导出配置不依赖VM <span class="text-muted"><small>(如果未提取，则提交给VM)</small></span>
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="oldloader" /> Old loader <span class="text-muted"><small>(Use legacy (spender) loader)</small></span>
+                                    <input type="checkbox" name="oldloader" /> 旧的加载程序 <span class="text-muted"><small>(使用旧的（spender）加载程序)</small></span>
                                 </label>
                             </div>
                         </div>
@@ -574,7 +573,7 @@ $(document).ready( function() {
                 </div>
             </div>
             </div>
-            <div style="margin-top: 20px;"><button type="submit" class="btn btn-default btn-lg">Analyze</button></div>
+            <div style="margin-top: 20px;"><button type="submit" class="btn btn-default btn-lg">分析</button></div>
         </form>
     </div>
 </div>

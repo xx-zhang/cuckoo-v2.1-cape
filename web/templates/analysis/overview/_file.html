@@ -1,16 +1,16 @@
 <section id="file">
-    <h4>File Details</h4>
+    <h4>文件详情</h4>
     {% if analysis.info.parent_sample %}
     <div class="form-group">
-        <label for="parent_file"><a href="#parent_file" data-toggle="collapse">Parent file</a></label>
+        <label for="parent_file"><a href="#parent_file" data-toggle="collapse">父文件</a></label>
         <div id="parent_file" class="collapse">
             <table class="table table-striped" style="table-layout: fixed;">
                 <tr>
-                    <th style="border-top: 0; width: 15%;">File Size</th>
+                    <th style="border-top: 0; width: 15%;">文件大小</th>
                     <td style="border-top: 0; word-wrap: break-word;">{{analysis.info.parent_sample.file_size}} bytes</td>
                 </tr>
                 <tr>
-                    <th>File Type</th>
+                    <th>文件类型</th>
                     <td style="word-wrap: break-word;">{{analysis.info.parent_sample.file_type}}</td>
                 </tr>
                 <tr>
@@ -57,16 +57,16 @@
                 <td style="border-top: 0; word-wrap: break-word;">{{analysis.target.file.name}}</td>
             </tr>
             <tr>
-                <th>File Size</th>
-                <td>{{analysis.target.file.size}} bytes</td>
+                <th>文件大小</th>
+                <td>{{analysis.target.file.size}} 字节</td>
             </tr>
             <tr>
-                <th>File Type</th>
+                <th>文件类型</th>
                 <td style="word-wrap: break-word;">{{analysis.target.file.type}}</td>
             </tr>
             {% if analysis.target.file.timestamp %}
             <tr>
-                <th>PE timestamp</th>
+                <th>PE 时间戳</th>
                 <td style="word-wrap: break-word;">{{analysis.target.file.timestamp}}</td>
             </tr>
             {% endif %}

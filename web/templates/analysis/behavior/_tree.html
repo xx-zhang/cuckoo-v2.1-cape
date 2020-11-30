@@ -1,7 +1,7 @@
 {% load generic_tags %}
 {% load analysis_tags %}
 
-<h4>Process Tree</h4>
+<h4>进程树</h4>
 <ul>
 {% for process in behavior.processtree|proctreetolist %}
     {% if process.startchildren %}

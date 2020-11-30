@@ -1,26 +1,26 @@
 {% if similar|length > 0 %}
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title">Similar Analyses</h3>
+            <h3 class="panel-title">相似分析</h3>
         </div>
         <table class="table table-striped" style="table-layout: fixed;">
             <thead>
             <tr>
                 <th width="5%">ID</th>
-                <th width="12%">Timestamp</th>
-                <th width="37%">Filename</th>
-                <th width="20%">Target/MD5</th>
+                <th width="12%">时间</th>
+                <th width="37%">文件名</th>
+                <th width="20%">目标/MD5</th>
                 {% if config.moloch %}
                 <th width="5%">Moloch</th>
                 {% endif %}
                 {% if config.suricata %}
-                <th width="5%">SuriAlert</th>
+                <th width="5%">Suri告警</th>
                 {% endif %}
                 {% if config.virustotal %}
                 <th width="5%">VT</th>
                 {% endif %}
-                <th width="5%">MalScore</th>
-                <th width="6%" style="text-align: right;">MalFamily</th>
+                <th width="5%">威胁分数</th>
+                <th width="6%" style="text-align: right;">威胁类别</th>
             </tr>
             </thead>
             <tbody>
@@ -59,7 +59,7 @@
                     {% if config.moloch %}
                     <td>
                         {% if analysis.moloch_url %}
-                            <a href={{analysis.moloch_url}} target="_blank"><span class="mono">MOLOCH</span></a>
+                            <a href={{analysis.moloch_url}} target="_blank"><span class="mono">MOLOCH查看</span></a>
                         {% else %}
                             <span class="mono">None</span>
                         {% endif %}
@@ -111,5 +111,5 @@
         </table>
     </div>
 {% else %}
-    <div class="alert alert-info" style="text-align: center;"><b>No similar analyses found.</b></div>
+    <div class="alert alert-info" style="text-align: center;"><b>没找到相似分析的结果.</b></div>
 {% endif %}

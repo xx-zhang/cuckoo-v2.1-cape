@@ -77,35 +77,35 @@ $(function() {
 {% endif %}
 
 <ul class="nav nav-tabs">
-    <li class="active"><a href="#overview" data-toggle="tab">Quick Overview</a></li>
-    {% if analysis.static or config.virustotal and analysis.virustotal %}<li><a href="#static" data-toggle="tab">Static Analysis</a></li>{% endif %}
-    <li><a href="#behavior" data-toggle="tabajax" data-url="/analysis/load_files/{{analysis.info.id}}/behavior/" data-toggle="tab">Behavioral Analysis</a></li>
-    <li><a href="#network" data-toggle="tab">Network Analysis</a></li>
+    <li class="active"><a href="#overview" data-toggle="tab">快速查看</a></li>
+    {% if analysis.static or config.virustotal and analysis.virustotal %}<li><a href="#static" data-toggle="tab">静态分析</a></li>{% endif %}
+    <li><a href="#behavior" data-toggle="tabajax" data-url="/analysis/load_files/{{analysis.info.id}}/behavior/" data-toggle="tab">行为分析</a></li>
+    <li><a href="#network" data-toggle="tab">网络分析</a></li>
     {% if analysis.info.category != "pcap" %}
-        {% if analysis.dropped %}<li><a href="#dropped" data-toggle="tabajax" data-url="/analysis/load_files/{{analysis.info.id}}/dropped/" data-toggle="tab">Dropped Files ({{analysis.dropped}})</a></li>{% endif %}
-        {% if analysis.procmemory|length %}<li><a href="#procmemory" data-toggle="tab">Process Memory ({{analysis.procmemory|length}})</a></li>{% endif %}
-        {% if analysis.memory %}<li><a href="#memory" data-toggle="tab">Memory Analysis</a></li>{% endif %}
-        {% if analysis.procdump|length %}<li><a href="#procdump" data-toggle="tab">Process Dumps ({{analysis.procdump|length}})</a></li>{% endif %}
+        {% if analysis.dropped %}<li><a href="#dropped" data-toggle="tabajax" data-url="/analysis/load_files/{{analysis.info.id}}/dropped/" data-toggle="tab">文件释放 ({{analysis.dropped}})</a></li>{% endif %}
+        {% if analysis.procmemory|length %}<li><a href="#procmemory" data-toggle="tab">进程内存 ({{analysis.procmemory|length}})</a></li>{% endif %}
+        {% if analysis.memory %}<li><a href="#memory" data-toggle="tab">内存分析</a></li>{% endif %}
+        {% if analysis.procdump|length %}<li><a href="#procdump" data-toggle="tab">进程分析 ({{analysis.procdump|length}})</a></li>{% endif %}
         {% if analysis.CAPE %}<li><a href="#CAPE" data-toggle="tabajax" data-url="/analysis/load_files/{{analysis.info.id}}/CAPE/" data-toggle="tab">CAPE ({{analysis.CAPE}})</a></li>{% endif%}
         <!--ToDo remove in CAPEv3-->
         {% if analysis.CAPE_old %}<li><a href="#CAPE_old" data-toggle="tabajax" data-url="/analysis/load_files/{{analysis.info.id}}/CAPE_old/" data-toggle="tab">CAPE ({{analysis.CAPE_old}})</a></li>{% endif%}
-        {% if analysis.debugger_logs %}<li><a href="#debugger" data-toggle="tabajax" data-url="/analysis/load_files/{{analysis.info.id}}/debugger/" data-toggle="tab">Debugger</a></li>{% endif %}
+        {% if analysis.debugger_logs %}<li><a href="#debugger" data-toggle="tabajax" data-url="/analysis/load_files/{{analysis.info.id}}/debugger/" data-toggle="tab">调试</a></li>{% endif %}
     {% endif %}
     {% if config.malheur %}
         {% if analysis.info.category == "file" or analysis.info.category == "url" %}
             {% if similar|length %}
-                <li><a href="#similar" data-toggle="tab">Similar ({{similar|length}})</a></li>
+                <li><a href="#similar" data-toggle="tab">相似 ({{similar|length}})</a></li>
             {% else %}
-                <li><a href="#similar" data-toggle="tab">Similar</a></li>
+                <li><a href="#similar" data-toggle="tab">相似</a></li>
             {% endif %}
         {% endif %}
     {% endif %}
-    {% if reports_exist %}<li><a href="#reports" data-toggle="tab">Reports</a></li>{% endif %}
+    {% if reports_exist %}<li><a href="#reports" data-toggle="tab">报告</a></li>{% endif %}
     {% if settings.COMMENTS %}
         {% if analysis.info.comments|length %}
-            <li><a href="#comments" data-toggle="tab">Comments ({{analysis.info.comments|length}})</a></li>
+            <li><a href="#comments" data-toggle="tab">内容 ({{analysis.info.comments|length}})</a></li>
         {% else %}
-            <li><a href="#comments" data-toggle="tab">Comments</a></li>
+            <li><a href="#comments" data-toggle="tab">内容</a></li>
         {% endif %}
     {% endif %}
     {% if analysis.misp %}
@@ -115,7 +115,7 @@ $(function() {
     {% if analysis.mitre_attck %}<li><a href="#mitre" data-toggle="tab">Mitre ATT&CK</a></li>{% endif %}
     {% if analysis.classification%}<li><a href="#classification" data-toggle="tab">Classification</a> </li>{% endif %}
     {% if analysis.curtain%}<li> <a href="#curtain" data-toggle="tab">Curtain</a></li>{% endif %}
-    <li><a href="#statistics" data-toggle="tab">Statistics</a></li>
+    <li><a href="#statistics" data-toggle="tab">静态分析</a></li>
     {% if settings.ADMIN %}<li><a href="#admin" data-toggle="tab">Admin</a></li>{% endif %}
 </ul>
 <div class="tab-content">
